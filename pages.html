@@ -1,0 +1,22 @@
+---
+layout: base
+pagination:
+  data: photos.lamirvz.media
+  size: 1
+permalink: 'photo/{{ pagination.items[0].id }}/index.html'
+---
+<main>
+  <section>
+<h1>{{ pagination.items[0].alt }}</h1>
+<img src="{{ pagination.items[0].src.original }}" alt="{{ pagination.items[0].src.alt }}" />
+</section>
+</main>
+
+<footer>
+    <hr>
+    <p>
+        <small>
+            <a href="https://www.pexels.com">Photos provided by Pexels</a>
+        </small>
+    </p>
+</footer
