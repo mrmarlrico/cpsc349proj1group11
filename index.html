@@ -1,46 +1,21 @@
 ---
 layout: base
-title: Home
+title: Deserts Photography
+permalink: 'index.html'
 ---
-<!DOCTYPE html>
-<html lang = "en">
-<html color-mode = "user">
+<section>   
+    <h2>Image of Deserts</h2>
+</section>
+{% for photo in photos.lamirvz.media %}
+<div>
+    <section>
+        <h3>{{photo.alt}}</h3>
+    </section>
+    <section>
+        <figure><a href = "photo/{{ photo.id }}"> <img src = "{{photo.src.tiny}}" alt = "{{photo.alt }}"/></a>
+            <figcaption>Photographer: {{photo.photographer}}</figcaption>
+        </figure>
+    </section>
+</div>
+{% endfor -%}
 
-<head>
-    <meta charset = "utf-8">
-    <title>Deserts</title>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.11/mvp.css">
-
-
-</head>
-<header>
-    <h1>Desert<span> Photography</span></h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-        
-        </ul>
-    </nav>
-</header>
-<body>
-    <h1>{{ Deserts }}</h1>
-<ul>
-     {% for photo in photos.lamirvz.media %}
-     <aside>
-    <li>{{ photo.alt }}</li>
-    <li><a href = "photo/{{ photo.id }}/index.html"> <img src = "{{photo.src.tiny}}" alt = "{{photo.alt }}"/></a></li>
-    <li><small>Photographer : {{ photo.photographer }} </small></li>
-    </aside>
-    {% endfor -%}
-</ul>
-</body>
-<footer>
-    <hr>
-    <p> 
-        <small>
-            <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small>
-    </p>
-</footer>
-</html>
