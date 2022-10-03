@@ -1,22 +1,19 @@
 ---
 layout: base
+title: Deserts Photography
 pagination:
   data: photos.lamirvz.media
   size: 1
 permalink: 'photo/{{ pagination.items[0].id }}/index.html'
 ---
-<main>
-  <section>
-<h1>{{ pagination.items[0].alt }}</h1>
-<img src="{{ pagination.items[0].src.original }}" alt="{{ pagination.items[0].src.alt }}" />
+<section class = "imagefig">
+    <h2>{{ pagination.items[0].alt }}</h2>
+    <figure>
+        <img src="{{ pagination.items[0].src.original }}" alt="{{ pagination.items[0].src.alt }}" />
+        <figcaption>
+            <a href="{{pagination.items[0].photographer_url}}">
+            Photograph by: {{pagination.items[0].photographer}}
+            </a>
+        </figcaption>
+    </figure>
 </section>
-</main>
-
-<footer>
-    <hr>
-    <p>
-        <small>
-            <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small>
-    </p>
-</footer
