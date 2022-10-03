@@ -1,28 +1,37 @@
 ---
-layout: base
-title: About Us
-permalink: 'about.html'
+site: CPSC 349 - Fall 2022 - Project 1
 ---
-<section class = "about">
-    <div class = "Description & Credits">
-        <h1>Project Description & Credits</h1>
-        <p> This project was designed by Geoff Mendoza and Marl Kristoffer Rico. This is a website that we designed to display stock images of deserts that were taken by numerous different photographers.
-            These photos were provided to us by Pexels, a free stock photo and video website that is shared by many creators. </p>
-        <small>
-            <h2><a href="https://www.pexels.com">Check out Pexels here!</a>
-        </small>
-    </div>
-    
-    
-    <div class = "links">
-        <h3>Github Repositories</h3>
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset = "utf-8">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.11/mvp.css">
+    </head>
+    <body>
+        <header>
+            <h1>{{title}}</h1>
+            <div id = "navigation">
+                <nav>
+                    <ul>
+                        <li><a href="/index.html"><i>Home</i></a></li>
+                        <li><a href="/about.html"><i>About us</i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            {{ content }}
+        </main>
+        <footer>
+            <hr>
+            <p> 
+                <small>
+                    <a href="https://www.pexels.com">Photos provided by Pexels</a>
+                </small>
+            </p>
+        </footer>
+    </body>
         
-            <ul>
-                <li><a href = "https://github.com/gmendzy">Geoff Mendoza</a></li>
-                <li><a href = "https://github.com/mrmarlrico">Marl Kristoffer Rico</a></li>
-                <li><a href = "https://github.com/gmendzy">Geoff Mendoza</a></li>
-                <li><a href = "https://github.com/gmendzy">Geoff Mendoza</a></li>
-                
-            </ul>
-        </div>
-</section>
+</html>

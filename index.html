@@ -3,19 +3,13 @@ layout: base
 title: Deserts Photography
 permalink: 'index.html'
 ---
-<section>   
+<section class = "main_title">   
     <h2>Image of Deserts</h2>
 </section>
 {% for photo in photos.lamirvz.media %}
-<div>
-    <section>
-        <h3>{{photo.alt}}</h3>
-    </section>
-    <section>
-        <figure><a href = "photo/{{ photo.id }}"> <img src = "{{photo.src.tiny}}" alt = "{{photo.alt }}"/></a>
-            <figcaption>Photographer: {{photo.photographer}}</figcaption>
-        </figure>
-    </section>
-</div>
+    <h3>{{photo.alt}}</h3>
+    <figure><a href = "photo/{{ photo.id }}"> <img src = "{{photo.src.tiny}}" alt = "{{photo.alt }}"/></a>
+        <figcaption>Photographer: {{photo.photographer}}</figcaption>
+    </figure>    
 {% endfor -%}
 
