@@ -4,16 +4,20 @@ title: Deserts Photography
 pagination:
   data: photos.lamirvz.media
   size: 1
-permalink: 'photo/{{ pagination.items[0].id }}/index.html'
+permalink: "photo/{{ pagination.items[0].id }}/index.html"
 ---
-<section class = "imagefig">
-    <h2>{{ pagination.items[0].alt }}</h2>
-    <figure>
-        <img src="{{ pagination.items[0].src.original }}" alt="{{ pagination.items[0].src.alt }}" />
-        <figcaption>
-            <a href="{{pagination.items[0].photographer_url}}">
-            Photograph by: {{pagination.items[0].photographer}}
-            </a>
-        </figcaption>
-    </figure>
+
+<section class="imagefig">
+  <h2>{{ pagination.items[0].alt }}</h2>
+  <figure>
+    <img
+      src="{{ pagination.items[0].src.original }}"
+      alt="{{ pagination.items[0].src.alt }}"
+    />
+    <figcaption>
+      <a href="{{pagination.items[0].photographer_url}}">
+        Photograph by: {{pagination.items[0].photographer}}
+      </a>
+    </figcaption>
+  </figure>
 </section>
